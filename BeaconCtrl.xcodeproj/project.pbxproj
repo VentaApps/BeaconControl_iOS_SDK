@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63AB64AF9854A0B9EF1A83A2 /* libPods-BeaconCtrl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B01EFC65FB2F81FDD28F91 /* libPods-BeaconCtrl.a */; };
 		75472CB81B5199FA0013F3CB /* BCLAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B87EBF1B31C0F300439104 /* BCLAction.m */; };
 		75472CB91B5199FA0013F3CB /* BCLBeaconCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B87EC11B31C0F300439104 /* BCLBeaconCtrl.m */; };
 		75472CBA1B5199FA0013F3CB /* BCLConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B87EC51B31C0F300439104 /* BCLConfiguration.m */; };
@@ -144,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7568567518F6DC1C00C07F3F /* Foundation.framework in Frameworks */,
-				63AB64AF9854A0B9EF1A83A2 /* libPods-BeaconCtrl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +294,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7568569418F6DC1C00C07F3F /* Build configuration list for PBXNativeTarget "BeaconCtrl" */;
 			buildPhases = (
+				0BDD5600703240FB37B65B88 /* [CP] Check Pods Manifest.lock */,
 				874B2F46FC0D4943968BDB00 /* Check Pods Manifest.lock */,
 				7568566D18F6DC1C00C07F3F /* Sources */,
 				7568566E18F6DC1C00C07F3F /* Frameworks */,
 				7568566F18F6DC1C00C07F3F /* CopyFiles */,
 				CAD1EB6EF580F0F5422404D1 /* Copy Pods Resources */,
 				75AE616E1B39B38100F1C902 /* ShellScript */,
+				7E226E1376A73101583C4DBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,6 +339,24 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0BDD5600703240FB37B65B88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeaconCtrl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		75AE616E1B39B38100F1C902 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +369,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ -f /usr/local/bin/appledoc ]\nthen\n/usr/local/bin/appledoc \\\n--project-name BeaconCtrl \\\n--project-company \"UP-NEXT\"  \\\n--company-id com.up-next \\\n--no-create-docset \\\n--no-repeat-first-par \\\n--create-html \\\n--logformat xcode \\\n--output help \\\n--use-single-star \\\n--explicit-crossref \\\n--exclude-output BeaconCtrl/Private \\\n--exit-threshold 2 \\\nBeaconCtrl\nfi";
+		};
+		7E226E1376A73101583C4DBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeaconCtrl/Pods-BeaconCtrl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		874B2F46FC0D4943968BDB00 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

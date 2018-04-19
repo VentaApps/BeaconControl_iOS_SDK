@@ -1,0 +1,1 @@
+../../../KontaktSDK-OLD/KontaktSDK/Headers/KTKBeaconProfile.h
