@@ -10,7 +10,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UNCoding.h"
+#import <UNNetworking/UNCoding.h>
 
 @interface BCLEncodableObject : NSObject <UNCoding>
 
