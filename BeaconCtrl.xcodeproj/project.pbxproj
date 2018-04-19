@@ -36,6 +36,7 @@
 		75472CD21B5199FA0013F3CB /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B87EFF1B31C0F300439104 /* UIColor+Hex.m */; };
 		7568567518F6DC1C00C07F3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7568567418F6DC1C00C07F3F /* Foundation.framework */; };
 		75AE61711B39B58100F1C902 /* BCLBeaconCtrlAdmin.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AE61701B39B58100F1C902 /* BCLBeaconCtrlAdmin.m */; };
+		818B7EFC2088F9DC00E1EAF6 /* BCLKontaktIOBeaconConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 818B7EFB2088F9DB00E1EAF6 /* BCLKontaktIOBeaconConfigManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -130,6 +131,8 @@
 		75B87EFE1B31C0F300439104 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		75B87EFF1B31C0F300439104 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		7B4464C5E7DAD8806896A806 /* Pods-BeaconCtrl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCtrl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCtrl/Pods-BeaconCtrl.debug.xcconfig"; sourceTree = "<group>"; };
+		818B7EFA2088F9DB00E1EAF6 /* BCLKontaktIOBeaconConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLKontaktIOBeaconConfigManager.h; sourceTree = "<group>"; };
+		818B7EFB2088F9DB00E1EAF6 /* BCLKontaktIOBeaconConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLKontaktIOBeaconConfigManager.m; sourceTree = "<group>"; };
 		8FDE56748A40DE1C44647747 /* libPods-BeaconOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeaconOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E627BCCA49410D673BE28DB /* libPods-BeaconCtrlTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeaconCtrlTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02957AC082664C2189E18AF /* Pods-BeaconCtrlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconCtrlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconCtrlTests/Pods-BeaconCtrlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				75B87EBF1B31C0F300439104 /* BCLAction.m */,
 				75B87EC01B31C0F300439104 /* BCLBeaconCtrl.h */,
 				75B87EC11B31C0F300439104 /* BCLBeaconCtrl.m */,
+				818B7EFA2088F9DB00E1EAF6 /* BCLKontaktIOBeaconConfigManager.h */,
+				818B7EFB2088F9DB00E1EAF6 /* BCLKontaktIOBeaconConfigManager.m */,
 				75AE616F1B39B58100F1C902 /* BCLBeaconCtrlAdmin.h */,
 				75AE61701B39B58100F1C902 /* BCLBeaconCtrlAdmin.m */,
 				75B87EC21B31C0F300439104 /* BCLBeaconCtrlDelegate.h */,
@@ -439,6 +444,7 @@
 				75472CC61B5199FA0013F3CB /* BCLActionHandlerFactory.m in Sources */,
 				75472CC71B5199FA0013F3CB /* BCLAdminBackend.m in Sources */,
 				75472CC81B5199FA0013F3CB /* BCLBackend.m in Sources */,
+				818B7EFC2088F9DC00E1EAF6 /* BCLKontaktIOBeaconConfigManager.m in Sources */,
 				75472CC91B5199FA0013F3CB /* BCLCouponActionHandler.m in Sources */,
 				75472CCA1B5199FA0013F3CB /* BCLObservedBeaconsPicker.m in Sources */,
 				75472CCB1B5199FA0013F3CB /* BCLURLActionHandler.m in Sources */,
