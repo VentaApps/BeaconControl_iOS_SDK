@@ -1,1 +1,0 @@
-../../../KontaktSDK-OLD/KontaktSDK/Headers/KTKPublicVenue.h

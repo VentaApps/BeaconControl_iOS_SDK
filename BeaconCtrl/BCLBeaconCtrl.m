@@ -12,8 +12,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <SAMCache/SAMCache.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import <KontaktSDK-OLD/KTKBeacon.h>
-#import <KontaktSDK-OLD/KTKBeaconDevice.h>
+//#import <KontaktSDK-OLD/KTKBeacon.h>
+//#import <KontaktSDK-OLD/KTKBeaconDevice.h>
+#import <KontaktSDK/KontaktSDK.h>
 
 #import "BCLConfiguration.h"
 #import "SAMCache+BeaconCtrl.h"
@@ -558,9 +559,9 @@ static NSString * const BCLBeaconCtrlArchiveFilename = @"beacon_ctrl.data";
             }
             
             if ([manager.kontaktBeaconsDictionary.allKeys containsObject:beacon.vendorIdentifier]) {
-                KTKBeacon *kontaktBeacon = manager.kontaktBeaconsDictionary[beacon.vendorIdentifier];
-                beacon.transmissionPower = kontaktBeacon.power.integerValue;
-                beacon.transmissionInterval = kontaktBeacon.interval.integerValue;
+//                KTKBeacon *kontaktBeacon = manager.kontaktBeaconsDictionary[beacon.vendorIdentifier];
+//                beacon.transmissionPower = kontaktBeacon.power.integerValue;
+//                beacon.transmissionInterval = kontaktBeacon.interval.integerValue;
             }
         }
     }];
@@ -568,19 +569,19 @@ static NSString * const BCLBeaconCtrlArchiveFilename = @"beacon_ctrl.data";
 
 - (void)kontaktIOBeaconManager:(BCLKontaktIOBeaconConfigManager *)manager didMonitorBeaconDevices:(NSArray *)devices
 {
-    NSMutableDictionary *devicesDictionary = @{}.mutableCopy;
-    [devices enumerateObjectsUsingBlock:^(KTKBeaconDevice *device, NSUInteger idx, BOOL *stop) {
-        devicesDictionary[device.uniqueID] = device;
-    }];
-
-    __block KTKBeaconDevice *device;
-    [self.configuration.beacons enumerateObjectsUsingBlock:^(BCLBeacon *beacon, BOOL *stop) {
-        if (beacon.vendorIdentifier && [devicesDictionary.allKeys containsObject:beacon.vendorIdentifier]) {
-            device = devicesDictionary[beacon.vendorIdentifier];
-            beacon.batteryLevel = device.batteryLevel;
-            beacon.vendorFirmwareVersion = device.firmwareVersion.stringValue;
-        }
-    }];
+//    NSMutableDictionary *devicesDictionary = @{}.mutableCopy;
+//    [devices enumerateObjectsUsingBlock:^(KTKBeaconDevice *device, NSUInteger idx, BOOL *stop) {
+//        devicesDictionary[device.uniqueID] = device;
+//    }];
+//
+//    __block KTKBeaconDevice *device;
+//    [self.configuration.beacons enumerateObjectsUsingBlock:^(BCLBeacon *beacon, BOOL *stop) {
+//        if (beacon.vendorIdentifier && [devicesDictionary.allKeys containsObject:beacon.vendorIdentifier]) {
+//            device = devicesDictionary[beacon.vendorIdentifier];
+//            beacon.batteryLevel = device.batteryLevel;
+//            beacon.vendorFirmwareVersion = device.firmwareVersion.stringValue;
+//        }
+//    }];
 }
 
 - (void)kontaktIOBeaconManager:(BCLKontaktIOBeaconConfigManager *)manager didStartUpdatingBeaconWithUniqueId:(NSString *)uniqueId
@@ -603,27 +604,27 @@ static NSString * const BCLBeaconCtrlArchiveFilename = @"beacon_ctrl.data";
             beacon.characteristicsAreBeingUpdated = NO;
             if (success) {
                 beacon.needsCharacteristicsUpdate = NO;
-                if (config.power) {
-                    beacon.transmissionPower = config.power.integerValue;
-                }
+//                if (config.power) {
+//                    beacon.transmissionPower = config.power.integerValue;
+//                }
                 
-                if (config.proximity) {
-                    beacon.proximityUUID = [[NSUUID alloc] initWithUUIDString:config.proximity];
-                }
+//                if (config.proximity) {
+//                    beacon.proximityUUID = [[NSUUID alloc] initWithUUIDString:config.proximity];
+//                }
+//
+//                if (config.major) {
+//                    beacon.major = config.major;
+//                }
+//
+//                if (config.minor) {
+//                    beacon.minor = config.minor;
+//                }
+//
+//                if (config.interval) {
+//                    beacon.transmissionInterval = config.interval.integerValue;
+//                }
                 
-                if (config.major) {
-                    beacon.major = config.major;
-                }
-                
-                if (config.minor) {
-                    beacon.minor = config.minor;
-                }
-                
-                if (config.interval) {
-                    beacon.transmissionInterval = config.interval.integerValue;
-                }
-                
-                beacon.fieldsToUpdate = [manager fieldsToUpdateForKontaktBeacon:manager.kontaktBeaconsDictionary[config.uniqueID]];
+//                beacon.fieldsToUpdate = [manager fieldsToUpdateForKontaktBeacon:manager.kontaktBeaconsDictionary[config.uniqueID]];
 
             }
 

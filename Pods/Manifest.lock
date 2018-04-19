@@ -1,10 +1,10 @@
 PODS:
-  - KontaktSDK-OLD (6.2)
+  - KontaktSDK (1.5.1)
   - SAMCache (0.3.3)
   - UNNetworking (0.7.2)
 
 DEPENDENCIES:
-  - KontaktSDK-OLD
+  - KontaktSDK
   - SAMCache
   - UNNetworking (from `https://github.com/upnext/UNNetworking.git`, branch `master`)
 
@@ -19,10 +19,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/upnext/UNNetworking.git
 
 SPEC CHECKSUMS:
-  KontaktSDK-OLD: 5a7d59b3e66f57aebcdb045311ded2f64ff1f14b
+  KontaktSDK: 68cc25fd7fbab5b03b1c86db440620e55b031580
   SAMCache: 790b2623a3e087c903daff872c90c248726c4c82
   UNNetworking: f639ebcea6343679d87caf67d00ef381f221ffd5
 
-PODFILE CHECKSUM: 75cfe7a0ee8b52ab92617d9f94ddd32c5af0e2ec
+PODFILE CHECKSUM: 09ab034b51d1e50d7e799fbc35db83ef20caff92
 
 COCOAPODS: 1.4.0
